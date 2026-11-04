@@ -31,6 +31,8 @@ This bundle is pinned to Horizon `998b1d8301928c0559a0f368809860a30d6d9e53` (Min
 horizon-mixins `e8cd0aa38cffef49cb2e088ef716baa107148c02`. A different Horizon revision requires revalidation.
 The launcher needs Git and Rust/Cargo to compile native mods.
 
+The release also includes Minisign signatures and the project public key; see [SIGNING.md](SIGNING.md) for Horizon submission and verification.
+
 ## Configuration
 
 On first use the mod creates `config/fast-items.json` inside the active game instance. Example:

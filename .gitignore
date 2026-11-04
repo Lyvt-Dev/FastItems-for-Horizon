@@ -1,3 +1,8 @@
 /target/
 /dist/
 __pycache__/
+
+# Private release-signing material must never be published.
+*.key
+signing-password.txt
+/private-signing/
