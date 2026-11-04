@@ -1,0 +1,6 @@
+{
+  "enabled": true,
+  "entity_shadows": true,
+  "render_sides": false,
+  "affect_3d_models": true
+}

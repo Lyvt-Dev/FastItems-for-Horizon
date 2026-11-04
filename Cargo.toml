@@ -1,0 +1,16 @@
+[package]
+name = "horizon-fast-items"
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+description = "Camera-facing dropped items for Horizon"
+
+[lib]
+path = "mixins/fast_items/runtime.rs"
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+glam = "0.30"
+
+[workspace]

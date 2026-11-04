@@ -1,0 +1,21 @@
+name: Fast Items checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Rust
+        run: rustup toolchain install 1.99.1 --profile minimal --component rustfmt --component clippy
+      - name: Test runtime
+        run: cargo +1.99.1 test --locked
+      - name: Lint runtime
+        run: cargo +1.99.1 clippy --all-targets --locked -- -D warnings
+      - name: Check formatting
+        run: rustfmt +1.99.1 --edition 2024 --check mixins/fast_items/*.rs
+      - name: Package
+        run: python3 tools/package.py
